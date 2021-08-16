@@ -8,8 +8,9 @@ button{
     min-width: 200px;
     max-width: 80%;
     height: 45PX;
-    font-family:'Roboto-Bold', sans-serif;
+    font-family:'Roboto', sans-serif;
     }
+
 .btn1{
     background: linear-gradient(170deg, $color-primary, $color-secondary);
     opacity:1;
@@ -19,7 +20,6 @@ button{
         }
     }
 /* séries de 3 boutons */
-
 
 ol{
     list-style: none;
@@ -32,7 +32,7 @@ ol{
     }
 li{
     font-weight: 700;
-    font-family: 'Roboto-Bold';
+    font-family:'Roboto';
     counter-increment: bullets;
     align-items: center;
     max-width: 100%;

@@ -4,6 +4,7 @@
 /*I MEDIAQUERIES POUR TELEPHONE (MOBIL FIRST)*/
 /* II MEDIAQUERIES POUR TABLETTES*/
 /* III MEDIAQUERIES POUR ORDINATEUR*/
+/* Régles générales*/
 /* Charte graphique*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
@@ -16,7 +17,7 @@ button {
   min-width: 200px;
   max-width: 80%;
   height: 45PX;
-  font-family: "Roboto-Bold", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .btn1 {
@@ -41,7 +42,7 @@ ol {
 
 li {
   font-weight: 700;
-  font-family: "Roboto-Bold";
+  font-family: "Roboto";
   counter-increment: bullets;
   align-items: center;
   max-width: 100%;
@@ -372,14 +373,14 @@ p {
   display: flex;
   justify-content: center;
 }
-.prix:active {
+.prix:hover {
   transition-delay: 0.75s;
   transform: translateX(-10px);
 }
-.prix:active + .cercle {
+.prix:hover + .cercle {
   width: 65px;
 }
-.prix:active + .cercle > .circlehere {
+.prix:hover + .cercle > .circlehere {
   animation: decalage 600ms 1000ms linear;
 }
 

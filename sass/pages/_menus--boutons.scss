@@ -6,7 +6,7 @@
     overflow:visible;
     display: flex;
     justify-content: center;
-    &:active{
+    &:hover{
     transition-delay: 0.75s;
     transform:translateX(-10px);
        &+ .cercle {

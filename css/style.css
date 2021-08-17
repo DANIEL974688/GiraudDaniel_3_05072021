@@ -183,6 +183,7 @@ p {
   line-height: 90%;
   padding-left: 6px;
   margin-top: 2px;
+  font-family: "Roboto", sans-serif;
 }
 
 .container1 {
@@ -274,12 +275,6 @@ p {
 .animation__entree1, .animation__plat1, .animation__dessert1 {
   width: 300px;
 }
-.animation__entree1:hover, .animation__plat1:hover, .animation__dessert1:hover {
-  transform: translateX(-5px);
-}
-.animation__entree1.prix, .animation__plat1.prix, .animation__dessert1.prix {
-  transform: translateY(-10px);
-}
 
 .animation__entree1 {
   animation: demarrage-delai 3500ms ease-out 1500ms 1 forwards;
@@ -359,17 +354,49 @@ p {
 .text__entree1 {
   text-align: left;
   display: flex;
-  width: 260px;
+  width: 220px;
   flex-direction: row;
-  flex: 1;
   margin: 4px 4px 4px 4px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 65px;
   padding: 0px;
-  white-space: nowrap;
   flex-wrap: wrap;
+}
+.text__entree1:hover + .prix {
+  transform: translateX(-25px);
+}
+.text__entree1:hover + .prix + .cercle {
+  width: 65px;
+}
+.text__entree1:hover + .prix > .circlehere {
+  animation: rotation 400ms linear;
+}
+
+.prix {
+  height: 20px;
+  font-size: 20px;
+  width: 35px;
+  margin-top: 45px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+}
+
+.cercle {
+  cursor: pointer;
+  background-color: #99E2D0;
+  background-attachment: local;
+  height: 85px;
+  width: 0px;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0px;
+  color: white;
 }
 
 .prix__entree1 {
@@ -384,42 +411,14 @@ p {
   width: 350px;
 }
 
-.prix {
-  height: 20px;
-  font-size: 20px;
-  width: 55px;
-  margin-top: 45px;
-  overflow: visible;
-  display: flex;
-  justify-content: center;
-}
-
-@keyframes decalage {
-  from {
+@keyframes rotation {
+  0% {
     transform: rotate(0deg);
-    opacity: 0;
   }
-  to {
+  100% {
     transform: rotate(360deg);
-    opacity: 1;
   }
 }
-.cercle {
-  cursor: pointer;
-  background-color: #99E2D0;
-  background-attachment: local;
-  height: 85px;
-  width: 0;
-  border-radius: 0 10px 10px 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 0px;
-  color: white;
-  transition: decalage 400ms linear;
-}
-
 /* I.2 Applications du loading spinner*/
 .container {
   position: absolute;

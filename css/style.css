@@ -125,7 +125,7 @@ li:hover {
 }
 
 h1 {
-  font-family: "Roboto-Bold", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 25px;
 }
 
@@ -183,6 +183,17 @@ p {
   line-height: 90%;
   padding-left: 6px;
   margin-top: 2px;
+}
+
+.container1 {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 250%;
+  text-align: center;
+  animation: loader 1.2s ease-in-out 1.5s reverse both;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* I.1.1.2 Header*/
@@ -262,6 +273,12 @@ p {
 
 .animation__entree1, .animation__plat1, .animation__dessert1 {
   width: 300px;
+}
+.animation__entree1:hover, .animation__plat1:hover, .animation__dessert1:hover {
+  transform: translateX(-5px);
+}
+.animation__entree1.prix, .animation__plat1.prix, .animation__dessert1.prix {
+  transform: translateY(-10px);
 }
 
 .animation__entree1 {
@@ -373,23 +390,15 @@ p {
   display: flex;
   justify-content: center;
 }
-.prix:hover {
-  transition-delay: 0.75s;
-  transform: translateX(-10px);
-}
-.prix:hover + .cercle {
-  width: 65px;
-}
-.prix:hover + .cercle > .circlehere {
-  animation: decalage 600ms 1000ms linear;
-}
 
 @keyframes decalage {
   from {
     transform: rotate(0deg);
+    opacity: 0;
   }
   to {
     transform: rotate(360deg);
+    opacity: 1;
   }
 }
 .cercle {
@@ -405,6 +414,7 @@ p {
   align-items: center;
   padding-right: 0px;
   color: white;
+  transition: decalage 400ms linear;
 }
 
 /* I.2 Applications du loading spinner*/

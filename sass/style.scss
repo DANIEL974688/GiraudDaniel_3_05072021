@@ -65,6 +65,7 @@ p{
     line-height:90%;
     padding-left: 6px;
     margin-top: 2px;
+    font-family:'Roboto', sans-serif;
     }
     .container1{
         position: absolute;
@@ -143,34 +144,24 @@ p{
     padding-bottom: 2px;
     width: 12%;
     font-size: 0.6em;
+    
 }
 .animation__entree1, .animation__plat1, .animation__dessert1{
     width:$width-mobile;
-   
-    &:hover{
-        transform:translateX(-5px)
-    } 
-        &.prix{
-        transform:translateY(-10px);
-
-    }
 }
 .animation__entree1{
-    
     animation: demarrage-delai 3500ms ease-out $delai1 1 forwards;
     &.animation__entree1{
         @include animation-plats;
     }
     }
 .animation__plat1{
-    
     animation: demarrage-delai 3500ms ease-out $delai2 1 forwards;
     &.animation__plat1{
         @include animation-plats;
     }
 }
 .animation__dessert1{
-    
     animation: demarrage-delai 3500ms ease-out $delai3 1 forwards;
     &.animation__dessert1{
         @include animation-plats;
@@ -202,21 +193,60 @@ p{
         
         }    
 }
+
 .text__entree1{
     text-align: left;
     display: flex;
-    width: 260px;
+    width: 220px;
     flex-direction: row;
-    flex: 1;
     margin: 4px 4px 4px 4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
     height: 65px;
     padding:0px;
-    white-space: nowrap;
     flex-wrap: wrap;
+    &:hover +.prix {
+        transform: translateX(-25px);
+        &+ .cercle{
+            width: 65px;
+        }
+            &> .circlehere{
+                animation: rotation 400ms linear;
+        }
+           
+        }
+    } 
+ 
+.prix{
+    height: 20px;
+    font-size:20px;
+    width: 35px;
+    margin-top:45px;
+    overflow:visible;
+    display: flex;
+    justify-content: center;
+
+    }
+
+.cercle{
+    cursor:pointer;
+    background-color: #99E2D0;
+    background-attachment: local;
+    height: 85px;
+    width: 0px;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    color:white;
+    }
+.circlehere{
+    
 }
+
 .prix__entree1{
     font-size: 15px;
     margin:5px;
@@ -227,7 +257,7 @@ p{
     align-items: center;
     width: 350px;
 }
-@import "./pages/menus--boutons";
+@import "./pages/keyframes";
 
     /* I.2 Applications du loading spinner*/
 .container{

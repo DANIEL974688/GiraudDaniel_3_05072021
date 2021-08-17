@@ -146,6 +146,7 @@ p{
 }
 .animation__entree1, .animation__plat1, .animation__dessert1{
     width:$width-mobile;
+   
     &:hover{
         transform:translateX(-5px)
     } 
@@ -155,6 +156,7 @@ p{
     }
 }
 .animation__entree1{
+    
     animation: demarrage-delai 3500ms ease-out $delai1 1 forwards;
     &.animation__entree1{
         @include animation-plats;

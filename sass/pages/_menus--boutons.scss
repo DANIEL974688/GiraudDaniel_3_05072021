@@ -6,31 +6,15 @@
     overflow:visible;
     display: flex;
     justify-content: center;
-    &:hover{
-    transition-delay: 0.75s;
-    transform:translateX(-10px);
-       &+ .cercle {
-        width: 65px;
-        &> .circlehere{
-            animation:decalage 600ms 1000ms linear;
-            }
-        }
-        }
+   
     }
-    
-@keyframes decalage{
-    from{
-        transform:rotate(0deg);
-    } to {
-        transform:rotate(360deg);
-    }
-}
+
 .cercle{
     cursor:pointer;
     background-color: #99E2D0;
     background-attachment: local;
     height: 85px;
-    width: 0;
+    width: 0px;
     border-radius: 0 10px 10px 0;
     overflow: hidden;
     display: flex;
@@ -38,4 +22,5 @@
     align-items: center;
     padding-right: 0px;
     color:white;
+    
     }

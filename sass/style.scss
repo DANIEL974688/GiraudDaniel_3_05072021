@@ -206,22 +206,23 @@ p{
     height: 65px;
     padding:0px;
     flex-wrap: wrap;
+    gap:0px;
     &:hover +.prix {
-        transform: translateX(-25px);
+        transform: translateX(-15px);
         &+ .cercle{
-            width: 65px;
-        }
+            width: 75px;
+        
             &> .circlehere{
                 animation: rotation 400ms linear;
         }
-           
+         }  
         }
     } 
  
 .prix{
-    height: 20px;
+    height: 30px;
     font-size:20px;
-    width: 35px;
+    width: 30px;
     margin-top:45px;
     overflow:visible;
     display: flex;
@@ -243,9 +244,7 @@ p{
     padding-right: 0px;
     color:white;
     }
-.circlehere{
-    
-}
+
 
 .prix__entree1{
     font-size: 15px;

@@ -210,16 +210,16 @@ p{
         transform: translateX(-25px);
         &+ .cercle{
             width: 65px;
-        }
+        
             &> .circlehere{
                 animation: rotation 400ms linear;
         }
-           
+         }  
         }
     } 
  
 .prix{
-    height: 20px;
+    height: 30px;
     font-size:20px;
     width: 35px;
     margin-top:45px;
@@ -243,9 +243,7 @@ p{
     padding-right: 0px;
     color:white;
     }
-.circlehere{
-    
-}
+
 
 .prix__entree1{
     font-size: 15px;

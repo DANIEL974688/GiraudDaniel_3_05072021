@@ -291,6 +291,7 @@ p {
   margin: 5px 8PX 10PX 8PX;
   content: "";
   opacity: 0;
+  gap: 15px;
 }
 
 .animation__plat1 {
@@ -308,6 +309,7 @@ p {
   margin: 5px 8PX 10PX 8PX;
   content: "";
   opacity: 0;
+  gap: 15px;
 }
 
 .animation__dessert1 {
@@ -325,6 +327,7 @@ p {
   margin: 5px 8PX 10PX 8PX;
   content: "";
   opacity: 0;
+  gap: 15px;
 }
 
 .ingredients {
@@ -363,21 +366,22 @@ p {
   height: 65px;
   padding: 0px;
   flex-wrap: wrap;
+  gap: 0px;
 }
 .text__entree1:hover + .prix {
-  transform: translateX(-25px);
+  transform: translateX(-15px);
 }
 .text__entree1:hover + .prix + .cercle {
-  width: 65px;
+  width: 75px;
 }
-.text__entree1:hover + .prix > .circlehere {
+.text__entree1:hover + .prix + .cercle > .circlehere {
   animation: rotation 400ms linear;
 }
 
 .prix {
-  height: 20px;
+  height: 30px;
   font-size: 20px;
-  width: 35px;
+  width: 30px;
   margin-top: 45px;
   overflow: visible;
   display: flex;
@@ -655,7 +659,7 @@ a {
   .text__entree1 {
     text-align: start;
     font-size: 15px;
-    width: 300px;
+    width: 480px;
     justify-content: start;
     display: flex;
     flex-direction: row;
@@ -749,7 +753,7 @@ a {
   }
 
   .animation__entree1, .animation__plat1, .animation__dessert1 {
-    width: 520px;
+    width: 550px;
   }
 
   h3 {
